@@ -21,7 +21,10 @@ body {
 
 .sidebar,
 .header-top,
-.header-bot {
+.header-bot,
+.heading,
+.card-title,
+.announcement-title {
   font-weight: bold;
 }
 
@@ -90,7 +93,8 @@ input {
   gap: 24px;
 }
 
-.user span {
+.user span, 
+.card span {
   font-variation-settings:
   'FILL' 0,
   'wght' 400,
@@ -169,17 +173,91 @@ button:active {
 .content {
   background-color: #f0f0f0;
   box-shadow: 0 4px 4px lightgray inset;
+  padding: 36px 24px 24px 24px;
   display: grid;
   grid-template-columns: 3fr 1fr;
+  gap: 24px;
 }
 
 .cards {
+  padding-top: 16px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-auto-rows: 240px;
+  gap: 24px;
+  overflow: auto;
+}
+
+.card,
+.announcements,
+.trending {
+  background-color: white;
+  border-radius: 8px;
+  padding: 36px 24px;
+}
+
+.card {
+  background-color: white;
+  box-shadow: 8px 0 0 orange inset;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 8px;
+}
+
+.card-text,
+.announcement-text,
+.trending-projname {
+  color: #505050;
+}
+
+.card-text {
+  flex: 1
+}
+
+.card-buttons {
+  align-self: end;
+  display: flex;
+  gap: 24px;
 }
 
 .content-right {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 36px;
+}
+
+.announcements,
+.trending {
+  margin-top: 16px;
+}
+
+.announcements {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.announcement-divider {
+  border: 1px solid #f0f0f0;
+}
+
+.announcement-title,
+.trending-link {
+  font-size: 0.9rem;
+}
+
+.announcement-text {
+  font-size: 0.8rem;
+}
+
+.trending {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.trending-project {
+  display: flex;
+  gap: 16px;
 }
